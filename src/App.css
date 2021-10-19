@@ -1,0 +1,81 @@
+
+.product{
+  max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 35px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+
+ }
+
+.card{
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: 45px ;
+  display: flex;
+  background-color: rgb(192, 221, 211);
+  flex-direction: column;
+  border-radius: 15px;
+ 
+}
+
+.image{
+  width: auto;
+  height: 60%;
+  flex: 4;
+}
+
+.title{
+  flex: 1;
+  text-align:center;
+  
+}
+
+.price{
+  flex: 1;
+  text-align: center;
+}
+.favorite{
+  flex: 1;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(192, 221, 211);
+  margin: 0 auto;
+}
+
+.header{
+  width: auto;
+  height: auto;
+  background-color: rgb(192, 221, 211);
+  text-align: center;
+  text-decoration: white;
+}
+.link{
+ 
+  color: black;
+  margin: 10px;
+
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: darkgray;
+  background-color: black;
+  padding: 5px;
+}
+a{
+  color: aliceblue;
+  text-decoration: none;
+}
+.close{
+  cursor: pointer;
+}
+.BsBasket{
+  cursor: pointer;
+  float: right;
+}

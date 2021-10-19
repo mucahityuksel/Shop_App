@@ -7,7 +7,7 @@ const Product = require("./models/product");
 const router = express.Router();
 
 app.use(cors());
-const dbURL = "mongodb+srv://mucahit:12345@cluster0.qlbn0.mongodb.net/shop?retryWrites=true&w=majority"
+const dbURL = "mongodb+srv://<>@cluster0.qlbn0.mongodb.net/shop?retryWrites=true&w=majority"
 
 mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => console.log("connected"))

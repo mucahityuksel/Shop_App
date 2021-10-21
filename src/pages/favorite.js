@@ -38,7 +38,7 @@ function Favorite() {
 
 
   const getFavorites = async () => {
-    await fetch('http://localhost:3001/app')
+    await fetch('https://shop-server-deploy.herokuapp.com/app')
       .then((res) => {
         return res.json();
       }).then(data => {
@@ -55,7 +55,7 @@ function Favorite() {
   }
 
   const removeFavorite = (item) => {
-    axios.delete(`http://localhost:3001/app/${item.id}`)
+    axios.delete(`https://shop-server-deploy.herokuapp.com/app/${item.id}`)
       .then((result) => {
         const newProductsFavorite = productsFavorite.map(productFavorite => {
           if (productFavorite.id === item.id) {
@@ -86,7 +86,8 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     border :"none",
-
+    height: '500px',
+    overlfow: "scroll",
     transform: 'translate(-50%, -50%)',
     }
 }
@@ -100,6 +101,8 @@ const customStyles = {
                 isOpen={modalIsOpen}
                 contentLabel="Hello"
                 onRequestClose={closeModal}
+                ariaHideApp={false}
+                contentLabel="Selected Option"
                 style={customStyles}
                 > 
                 

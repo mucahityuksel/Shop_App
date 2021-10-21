@@ -34,7 +34,7 @@ function Home() {
 
 
     const addFavorite = (item) => {
-        axios.post(`http://localhost:3001/app/${item.id}`)
+        axios.post(`https://shop-server-deploy.herokuapp.com/app/${item.id}`)
             .then((result) => {
                 const newState = result.data;//favoriye eklediklerim
                 console.log(newState);
@@ -53,7 +53,7 @@ function Home() {
     };
 
     const removeFavorite = (item) => {
-        axios.delete(`http://localhost:3001/app/${item.id}`)
+        axios.delete(`https://shop-server-deploy.herokuapp.com/app/${item.id}`)
         .then((result) => {
             const newProductsFavorite = productsFavorite.map(productFavorite => {
                 if (productFavorite.id === item.id) {
@@ -70,7 +70,7 @@ function Home() {
     };
 
     const getFavorites = async () => {
-        await fetch('http://localhost:3001/app')
+        await fetch('https://shop-server-deploy.herokuapp.com/app')
             .then((res) => {
                 return res.json();
             }).then(data => {
